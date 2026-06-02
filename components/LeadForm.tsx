@@ -77,7 +77,7 @@ export default function LeadForm() {
         <div className="lead-success-mark">✓</div>
         <h3>Request received.</h3>
         <p>
-          Thanks — we&apos;ll be in touch within one business day to schedule
+          Thanks, we&apos;ll be in touch within one business day to schedule
           your free data audit.
         </p>
         <p className="lead-ref">Reference · {refId}</p>

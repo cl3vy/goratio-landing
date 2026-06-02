@@ -74,7 +74,7 @@ export default function WhoFor() {
               <div className="gb-layer">
                 <div className="gl-label">Verified definition used</div>
                 <div className="gl-val">
-                  active_users — distinct users with a qualifying event.{" "}
+                  active_users: distinct users with a qualifying event.{" "}
                   <span className="kw">Excludes bot + test traffic.</span>
                 </div>
               </div>

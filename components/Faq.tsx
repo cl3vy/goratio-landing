@@ -16,7 +16,7 @@ export default function Faq() {
             </button>
             <div className="faq-a">
               <p>
-                A tool generates a <em>guess</em> from your column names —
+                A tool generates a <em>guess</em> from your column names,
                 inheriting the ambiguity you&apos;re trying to fix. We capture
                 your team&apos;s real logic and a human verifies every
                 definition before your AI ever sees it.
@@ -30,7 +30,7 @@ export default function Faq() {
             <div className="faq-a">
               <p>
                 Discovery is about one week. A working, connected layer lands in
-                weeks — not quarters. Fixed-scope, so you know what you&apos;re
+                weeks, not quarters. Fixed-scope, so you know what you&apos;re
                 getting.
               </p>
             </div>
@@ -42,7 +42,7 @@ export default function Faq() {
             <div className="faq-a">
               <p>
                 No. It&apos;s built in code, in your stack, and fully handed
-                over. The retainer is optional — you own everything.
+                over. The retainer is optional, you own everything.
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Faq() {
             </button>
             <div className="faq-a">
               <p>
-                Snowflake, BigQuery, Databricks, dbt, Cube — and any LLM or
+                Snowflake, BigQuery, Databricks, dbt, Cube, and any LLM or
                 agent. The semantic layer is the neutral source of truth they
                 all read from.
               </p>
@@ -65,7 +65,7 @@ export default function Faq() {
             <div className="faq-a">
               <p>
                 [FILL: where it runs, data handling, NDAs, access controls.] The
-                layer lives in your environment — we don&apos;t move your data
+                layer lives in your environment, we don&apos;t move your data
                 out of it.
               </p>
             </div>

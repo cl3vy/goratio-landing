@@ -11,7 +11,7 @@ export default function FinalCta() {
             get wrong.
           </h2>
           <p>
-            Book a free data audit — we&apos;ll map where your definitions break
+            Book a free data audit, we&apos;ll map where your definitions break
             down and show what a verified semantic layer would change. No
             obligation.
           </p>

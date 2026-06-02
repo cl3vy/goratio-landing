@@ -6,7 +6,7 @@ export default function HowItWorks() {
           How it works
         </p>
         <h2 className="section-title" data-reveal="" data-delay="60">
-          From &quot;our AI can&apos;t be trusted&quot; to production-ready — in
+          From &quot;our AI can&apos;t be trusted&quot; to production-ready, in
           weeks, not quarters.
         </h2>
         <div className="stepper" id="stepper">

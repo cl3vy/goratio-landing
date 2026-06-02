@@ -42,7 +42,7 @@ export default function Problem() {
             <h3>Every team has a different truth</h3>
             <p>
               Finance, sales and ops each define a metric differently. Your AI
-              inherits all three — and blends them.
+              inherits all three, and blends them.
             </p>
           </div>
           <div className="prob-card" data-reveal="">
@@ -76,7 +76,7 @@ export default function Problem() {
             <h3>Knowledge stuck in one head</h3>
             <p>
               The one analyst who knows what the numbers <em>really</em> mean is
-              your bottleneck — and your flight risk.
+              your bottleneck, and your flight risk.
             </p>
           </div>
         </div>

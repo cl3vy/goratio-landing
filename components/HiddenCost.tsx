@@ -77,7 +77,7 @@ export default function HiddenCost() {
               </span>
             </div>
             <p>of AI / data projects fail to deliver value.</p>
-            <cite>[INDUSTRY — verify before launch]</cite>
+            <cite>[INDUSTRY, verify before launch]</cite>
           </div>
           <div className="cost-tile" data-reveal="">
             <div className="stat">
@@ -96,7 +96,7 @@ export default function HiddenCost() {
               </span>
             </div>
             <p>analyst time lost per week re-deriving the same metrics.</p>
-            <cite>[FILL — your number]</cite>
+            <cite>[FILL: your number]</cite>
           </div>
         </div>
       </div>

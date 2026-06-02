@@ -25,9 +25,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Goratio — A verified semantic layer for your AI",
+  title: "Goratio: A verified semantic layer for your AI",
   description:
-    "We hand-build a verified semantic layer for your business — so every AI agent understands your data like your best analyst does. Built by humans. Checked by humans.",
+    "We hand-build a verified semantic layer for your business, so every AI agent understands your data like your best analyst does. Built by humans. Checked by humans.",
 };
 
 export default function RootLayout({

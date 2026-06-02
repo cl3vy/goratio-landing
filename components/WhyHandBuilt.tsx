@@ -9,7 +9,7 @@ export default function WhyHandBuilt() {
           Automatic tools guess at meaning. We don&apos;t guess.
         </h2>
         <p className="lede" data-reveal="" data-delay="120">
-          Auto-tools infer meaning from column names — so they inherit the exact
+          Auto-tools infer meaning from column names, so they inherit the exact
           ambiguity you&apos;re trying to fix, at scale. We build every layer by
           hand, capture your team&apos;s real logic, and a human verifies each
           definition.
@@ -58,7 +58,7 @@ export default function WhyHandBuilt() {
         <div className="compare" data-reveal="" data-delay="100">
           <div className="compare-head left">Automatic / DIY tools</div>
           <div className="compare-head right">
-            <span className="ch-title">Goratio — hand-built + verified</span>
+            <span className="ch-title">Goratio: hand-built + verified</span>
             <span className="vchip" data-cursor>
               <span className="vchip-label">✓ Verified by Goratio</span>
               <span className="vchip-pop" role="tooltip">
@@ -94,7 +94,7 @@ export default function WhyHandBuilt() {
             <span className="mark">✕</span> You QA everything yourself
           </div>
           <div className="crow right">
-            <span className="mark">✓</span> We verify it — you just trust it
+            <span className="mark">✓</span> We verify it, you just trust it
           </div>
 
           <div className="crow left">

@@ -9,8 +9,8 @@ export default function Solution() {
           A semantic layer is the translator between your data and your AI.
         </h2>
         <p className="lede" data-reveal="" data-delay="120">
-          A verified dictionary and map of your data — what every metric means,
-          which tables to trust, how to calculate it — so your AI answers like a
+          A verified dictionary and map of your data: what every metric means,
+          which tables to trust, how to calculate it, so your AI answers like a
           senior analyst instead of guessing.
         </p>
 

@@ -14,7 +14,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="lede" data-reveal="" data-delay="140">
-            We hand-build a verified semantic layer for your business — so every
+            We hand-build a verified semantic layer for your business, so every
             AI agent understands your data like your best analyst does. Built by
             humans. Checked by humans. Nothing automated.
           </p>

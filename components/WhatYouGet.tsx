@@ -29,7 +29,7 @@ export default function WhatYouGet() {
           <div className="get-item" data-reveal="">
             <span className="tick">✓</span>
             <p>
-              A data-truth audit report — the conflicts you didn&apos;t know
+              A data-truth audit report: the conflicts you didn&apos;t know
               existed.
             </p>
           </div>
