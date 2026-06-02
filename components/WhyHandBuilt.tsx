@@ -56,53 +56,52 @@ export default function WhyHandBuilt() {
 
         {/* comparison table */}
         <div className="compare" data-reveal="" data-delay="100">
-          <div className="compare-col left">
-            <div className="compare-head">Automatic / DIY tools</div>
-            <div className="crow">
-              <span className="mark">✕</span> Infers meaning from column names
-            </div>
-            <div className="crow">
-              <span className="mark">✕</span> Ships your data&apos;s ambiguity
-              at scale
-            </div>
-            <div className="crow">
-              <span className="mark">✕</span> No accountability for wrong
-              definitions
-            </div>
-            <div className="crow">
-              <span className="mark">✕</span> You QA everything yourself
-            </div>
-            <div className="crow">
-              <span className="mark">✕</span> Generic, one-size-fits-all
-            </div>
-          </div>
-          <div className="compare-col right">
-            <div className="compare-head">
-              Goratio — hand-built + verified
-              <span className="vchip">
-                ✓ Verified by Goratio
-                <span className="detail">
-                  {"\u00A0· owner D. Osei · 2024-Q3 · src rev_verified"}
-                </span>
+          <div className="compare-head left">Automatic / DIY tools</div>
+          <div className="compare-head right">
+            <span className="ch-title">Goratio — hand-built + verified</span>
+            <span className="vchip" data-cursor>
+              <span className="vchip-label">✓ Verified by Goratio</span>
+              <span className="vchip-pop" role="tooltip">
+                owner D. Osei · 2024-Q3 · src rev_verified
               </span>
-            </div>
-            <div className="crow">
-              <span className="mark">✓</span> Captures your team&apos;s real
-              logic
-            </div>
-            <div className="crow">
-              <span className="mark">✓</span> Resolves ambiguity before AI sees
-              it
-            </div>
-            <div className="crow">
-              <span className="mark">✓</span> A human signs off on every metric
-            </div>
-            <div className="crow">
-              <span className="mark">✓</span> We verify it — you just trust it
-            </div>
-            <div className="crow">
-              <span className="mark">✓</span> Tailored, edge cases included
-            </div>
+            </span>
+          </div>
+
+          <div className="crow left">
+            <span className="mark">✕</span> Infers meaning from column names
+          </div>
+          <div className="crow right">
+            <span className="mark">✓</span> Captures your team&apos;s real logic
+          </div>
+
+          <div className="crow left">
+            <span className="mark">✕</span> Ships your data&apos;s ambiguity at
+            scale
+          </div>
+          <div className="crow right">
+            <span className="mark">✓</span> Resolves ambiguity before AI sees it
+          </div>
+
+          <div className="crow left">
+            <span className="mark">✕</span> No accountability for wrong
+            definitions
+          </div>
+          <div className="crow right">
+            <span className="mark">✓</span> A human signs off on every metric
+          </div>
+
+          <div className="crow left">
+            <span className="mark">✕</span> You QA everything yourself
+          </div>
+          <div className="crow right">
+            <span className="mark">✓</span> We verify it — you just trust it
+          </div>
+
+          <div className="crow left">
+            <span className="mark">✕</span> Generic, one-size-fits-all
+          </div>
+          <div className="crow right">
+            <span className="mark">✓</span> Tailored, edge cases included
           </div>
         </div>
       </div>

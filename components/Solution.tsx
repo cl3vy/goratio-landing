@@ -29,7 +29,12 @@ export default function Solution() {
               </linearGradient>
             </defs>
             {/* left: messy tables */}
-            <g fontFamily="Geist Mono, monospace" fontSize="12" fill="#9A9AA2">
+            <g
+              fontFamily="Geist Mono, monospace"
+              fontSize="11"
+              fill="#9A9AA2"
+              textAnchor="middle"
+            >
               <g
                 className="sol-node"
                 style={{ animation: "nodePulse 3s 0s infinite" }}
@@ -43,7 +48,7 @@ export default function Solution() {
                   fill="#1B1B1E"
                   stroke="rgba(216,58,58,0.4)"
                 />
-                <text x="34" y="53">
+                <text x="80" y="53">
                   rev_v1 · rev_v2
                 </text>
               </g>
@@ -60,7 +65,7 @@ export default function Solution() {
                   fill="#1B1B1E"
                   stroke="rgba(216,58,58,0.4)"
                 />
-                <text x="50" y="105">
+                <text x="96" y="105">
                   events_raw
                 </text>
               </g>
@@ -77,7 +82,7 @@ export default function Solution() {
                   fill="#1B1B1E"
                   stroke="rgba(216,58,58,0.4)"
                 />
-                <text x="28" y="157">
+                <text x="74" y="157">
                   users · users_v2
                 </text>
               </g>
@@ -94,7 +99,7 @@ export default function Solution() {
                   fill="#1B1B1E"
                   stroke="rgba(216,58,58,0.4)"
                 />
-                <text x="54" y="209">
+                <text x="100" y="209">
                   sessions_old
                 </text>
               </g>
