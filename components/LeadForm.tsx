@@ -3,15 +3,14 @@
 import { useState } from "react";
 
 type FieldErrors = Partial<Record<"name" | "email" | "company", string>>;
-type Status = "idle" | "submitting" | "success" | "error";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const CONTACT_EMAIL = "hello@ratio.com";
 
 export default function LeadForm() {
-  const [status, setStatus] = useState<Status>("idle");
+  const [done, setDone] = useState(false);
   const [errors, setErrors] = useState<FieldErrors>({});
-  const [formError, setFormError] = useState<string>("");
-  const [refId, setRefId] = useState<string>("");
+  const [mailto, setMailto] = useState<string>("");
 
   function validate(data: {
     name: string;
@@ -27,17 +26,43 @@ export default function LeadForm() {
     return next;
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function buildMailto(data: {
+    name: string;
+    email: string;
+    company: string;
+    message: string;
+  }): string {
+    const subject = `Data audit request — ${data.company}`;
+    const body = [
+      `Name: ${data.name}`,
+      `Company: ${data.company}`,
+      `Work email: ${data.email}`,
+      "",
+      "What's breaking:",
+      data.message.trim() || "(not provided)",
+    ].join("\n");
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
     const payload = {
-      name: String(fd.get("name") ?? ""),
-      email: String(fd.get("email") ?? ""),
-      company: String(fd.get("company") ?? ""),
-      message: String(fd.get("message") ?? ""),
-      website: String(fd.get("website") ?? ""),
+      name: String(fd.get("name") ?? "").trim(),
+      email: String(fd.get("email") ?? "").trim(),
+      company: String(fd.get("company") ?? "").trim(),
+      message: String(fd.get("message") ?? "").trim(),
+      website: String(fd.get("website") ?? "").trim(),
     };
+
+    // Honeypot — real users never fill this hidden field.
+    if (payload.website !== "") {
+      setDone(true);
+      return;
+    }
 
     const clientErrors = validate(payload);
     if (Object.keys(clientErrors).length > 0) {
@@ -46,41 +71,29 @@ export default function LeadForm() {
     }
 
     setErrors({});
-    setFormError("");
-    setStatus("submitting");
-
-    try {
-      const res = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const json = await res.json();
-      if (!res.ok || !json.ok) {
-        if (json.errors) setErrors(json.errors as FieldErrors);
-        setFormError(json.error ?? "Something went wrong. Please try again.");
-        setStatus("error");
-        return;
-      }
-      setRefId(json.id as string);
-      setStatus("success");
-      form.reset();
-    } catch {
-      setFormError("Network error. Please try again.");
-      setStatus("error");
-    }
+    const link = buildMailto(payload);
+    setMailto(link);
+    // Open the visitor's email client with the request pre-filled.
+    window.location.href = link;
+    setDone(true);
+    form.reset();
   }
 
-  if (status === "success") {
+  if (done) {
     return (
       <div className="lead-success" role="status">
         <div className="lead-success-mark">✓</div>
-        <h3>Request received.</h3>
+        <h3>Your email is ready to send.</h3>
         <p>
-          Thanks, we&apos;ll be in touch within one business day to schedule
-          your free data audit.
+          We&apos;ve opened your email app with the request pre-filled — just
+          hit send and we&apos;ll be in touch within one business day.
         </p>
-        <p className="lead-ref">Reference · {refId}</p>
+        <p className="lead-ref">
+          Didn&apos;t see it open?{" "}
+          <a href={mailto || `mailto:${CONTACT_EMAIL}`}>
+            Email us at {CONTACT_EMAIL}
+          </a>
+        </p>
       </div>
     );
   }
@@ -153,18 +166,8 @@ export default function LeadForm() {
         />
       </div>
 
-      {formError && (
-        <p className="lead-form-error" role="alert">
-          {formError}
-        </p>
-      )}
-
-      <button
-        type="submit"
-        className="btn btn-primary lead-submit"
-        disabled={status === "submitting"}
-      >
-        {status === "submitting" ? "Sending…" : "Book my free audit"}
+      <button type="submit" className="btn btn-primary lead-submit">
+        Book my free audit
         <span className="arrow">→</span>
       </button>
       <p className="lead-note">No obligation · We never share your data.</p>

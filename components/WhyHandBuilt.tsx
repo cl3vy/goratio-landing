@@ -58,9 +58,9 @@ export default function WhyHandBuilt() {
         <div className="compare" data-reveal="" data-delay="100">
           <div className="compare-head left">Automatic / DIY tools</div>
           <div className="compare-head right">
-            <span className="ch-title">Goratio: hand-built + verified</span>
+            <span className="ch-title">Ratio: hand-built + verified</span>
             <span className="vchip" data-cursor>
-              <span className="vchip-label">✓ Verified by Goratio</span>
+              <span className="vchip-label">✓ Verified by Ratio</span>
               <span className="vchip-pop" role="tooltip">
                 owner D. Osei · 2024-Q3 · src rev_verified
               </span>

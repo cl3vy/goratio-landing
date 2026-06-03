@@ -64,9 +64,11 @@ export default function Faq() {
             </button>
             <div className="faq-a">
               <p>
-                [FILL: where it runs, data handling, NDAs, access controls.] The
-                layer lives in your environment, we don&apos;t move your data
-                out of it.
+                The layer lives in your environment — we don&apos;t move your
+                data out of it. We work under your NDA and access controls,
+                request only least-privilege access for the duration of the
+                work, and hand everything over in your own repositories. More
+                detail on our <a href="/security">security page</a>.
               </p>
             </div>
           </div>

@@ -3,7 +3,7 @@ export default function Nav() {
     <nav className="nav">
       <a href="#top" className="wordmark">
         <span className="dot" />
-        <span className="grad-text">Goratio</span>
+        <span className="grad-text">Ratio</span>
       </a>
       <div className="nav-links">
         <a href="#how">How it works</a>

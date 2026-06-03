@@ -20,7 +20,7 @@ export default function Solution() {
             viewBox="0 0 900 280"
             width="100%"
             height="280"
-            aria-label="Raw tables flow through the Goratio layer into clean AI outputs"
+            aria-label="Raw tables flow through the Ratio layer into clean AI outputs"
           >
             <defs>
               <linearGradient id="layerGrad" x1="0" y1="0" x2="1" y2="1">
@@ -155,7 +155,7 @@ export default function Solution() {
                 fontWeight="600"
                 fill="#F4F4F5"
               >
-                Goratio
+                Ratio
               </text>
               <text
                 x="450"

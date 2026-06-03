@@ -53,7 +53,7 @@ export default function Hero() {
             <div className="vs-badge">vs</div>
             <div className="ans-panel right">
               <div className="ans-head">
-                <span className="led" /> Through Goratio{" "}
+                <span className="led" /> Through Ratio{" "}
                 <span
                   className="chip verified right-chip"
                   style={{ opacity: 0, marginLeft: 6 }}

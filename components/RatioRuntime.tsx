@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { initGoratio } from "@/lib/goratioRuntime";
+import { initRatio } from "@/lib/ratioRuntime";
 
 /**
  * Runs the imperative background / interactives / UI scripts exactly once
@@ -9,13 +9,13 @@ import { initGoratio } from "@/lib/goratioRuntime";
  * under React Strict Mode's double-invoked effects (dev), so listeners and
  * animation loops are never duplicated.
  */
-export default function GoratioRuntime() {
+export default function RatioRuntime() {
   const started = useRef(false);
 
   useEffect(() => {
     if (started.current) return;
     started.current = true;
-    initGoratio();
+    initRatio();
   }, []);
 
   return null;

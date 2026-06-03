@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import "./sections.css";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ratio.com";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -24,10 +26,53 @@ const inter = Inter({
   display: "swap",
 });
 
+const title = "Ratio: A verified semantic layer for your AI";
+const description =
+  "We hand-build a verified semantic layer for your business, so every AI agent understands your data like your best analyst does. Built by humans. Checked by humans.";
+
 export const metadata: Metadata = {
-  title: "Goratio: A verified semantic layer for your AI",
-  description:
-    "We hand-build a verified semantic layer for your business, so every AI agent understands your data like your best analyst does. Built by humans. Checked by humans.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s",
+  },
+  description,
+  applicationName: "Ratio",
+  keywords: [
+    "semantic layer",
+    "AI data layer",
+    "metrics layer",
+    "data trust",
+    "LLM analytics",
+    "dbt",
+    "Cube",
+    "Snowflake",
+    "BigQuery",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Ratio",
+    title,
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0b",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

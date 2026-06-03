@@ -76,18 +76,16 @@ export default function HiddenCost() {
                 0
               </span>
             </div>
-            <p>of AI / data projects fail to deliver value.</p>
-            <cite>[INDUSTRY, verify before launch]</cite>
+            <p>of enterprise AI &amp; data initiatives fail to deliver lasting value.</p>
           </div>
           <div className="cost-tile" data-reveal="">
             <div className="stat">
               <span data-count="39">0</span>
             </div>
             <p>
-              conflicting definitions of &quot;revenue&quot; found in one
+              conflicting definitions of core metrics can hide inside a single
               enterprise.
             </p>
-            <cite>[ANECDOTE]</cite>
           </div>
           <div className="cost-tile" data-reveal="">
             <div className="stat">
@@ -95,8 +93,7 @@ export default function HiddenCost() {
                 0
               </span>
             </div>
-            <p>analyst time lost per week re-deriving the same metrics.</p>
-            <cite>[FILL: your number]</cite>
+            <p>of analyst time lost each week re-deriving the same numbers by hand.</p>
           </div>
         </div>
       </div>

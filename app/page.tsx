@@ -12,7 +12,7 @@ import WhoFor from "@/components/WhoFor";
 import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
-import GoratioRuntime from "@/components/GoratioRuntime";
+import RatioRuntime from "@/components/RatioRuntime";
 
 export default function Page() {
   return (
@@ -39,7 +39,7 @@ export default function Page() {
 
       <Footer />
 
-      <GoratioRuntime />
+      <RatioRuntime />
     </>
   );
 }
